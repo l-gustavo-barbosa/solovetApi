@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solovet - Login</title>
     <script defer src="login.js"></script>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form>
+    <form id="loginForm">
+        <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
+        <h1>SoloVet</h1>
         <label for="login">Login</label>
-        <input type="text" id="login" name="login">
+        <input type="text" id="login" name="login" class="textFields">
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password">
-        <input type="submit" id="submit">
+        <input type="password" id="password" name="password" class="textFields">
+        <input type="submit" id="submit" value="Entrar">
+        <button id="newUser">Ainda não tem conta? Crie aqui.</button>
+    </form>
+    <form id="signupForm">
+        <label for="login">Login</label>
+        <input type="text" id="newUserLogin" name="login" class="textFields">
+        <label for="password">Senha</label>
+        <input type="password" id="newUserPassword" name="password" class="textFields">
+        <input type="submit" id="submit" value="Entrar">
+        <button id="oldUser">Ainda não tem conta? Crie aqui.</button>
     </form>
 </body>
 </html>

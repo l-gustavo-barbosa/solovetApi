@@ -1,0 +1,99 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-image: linear-gradient(rgba(19, 49, 92, 0.7), rgba(19, 49, 92, 1)), url("imagens/bg.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    height: max-content;
+}
+
+#loginForm{
+    width: calc(25% - 48px);
+    max-width: calc(400px - 48px);
+    min-width: 300px;
+    margin: 128px auto;
+    background-color: #4EA8DE;
+    padding: 16px 24px;
+    border-radius: 32px;
+    filter: drop-shadow(0 48px 32px #0b2545);
+
+}
+
+#loginForm #logoLogin{
+    display: block;
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 49, 92, 0.25), #4EA8DE);
+    border-radius: 50%;
+}
+
+#loginForm h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    font-size: 32px;
+    text-align: center;
+    margin: -24px 0 8px;
+    color: #03045e;
+    
+}
+
+#loginForm label{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    margin-bottom: 4px;
+    color: #03045e;
+}
+
+#loginForm .textFields{
+    padding: 8px 16px;
+    display: block;
+    margin: 0 auto 8px;
+    width: calc(100% - 32px);
+    border: none;
+    border-radius: 8px;
+    background-color: #A9D4EF;
+    color: #14213d;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+}
+
+#loginForm .textFields:focus{
+    border: 1px solid #03045e;
+}
+
+#loginForm #submit{
+    display: block;
+    margin: 16px auto;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    background-color: #03045e;
+    color: #fff;
+}
+
+#loginForm #newUser{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+#loginForm #newUser:hover, #loginForm #submit:hover {
+    cursor: pointer;
+}
+
+
+
+#signupForm{
+    display:none;
+}
