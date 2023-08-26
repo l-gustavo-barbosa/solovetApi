@@ -1,3 +1,4 @@
+
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evitar o comportamento padrão do formulário
 
@@ -5,7 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const password = document.getElementById("password").value;
 
     login(username, password);
-}); 
+});
 
 async function login(username, password){
     console.log("teste");
@@ -22,11 +23,11 @@ async function login(username, password){
                 password:password
             })
         });
-        console.log(response)
-        console.log(response);
+
         if(response.ok){
             const data = await response.json();
             console.log("Login bem sucedido: ", data);
+            location.href = "dashboard.html"
         } else {
             console.error("Erro no login:", response.statusText)
         }

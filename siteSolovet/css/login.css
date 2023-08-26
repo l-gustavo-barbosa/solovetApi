@@ -8,7 +8,7 @@ body{
     height: max-content;
 }
 
-#loginForm{
+#loginForm, #signupForm{
     width: calc(25% - 48px);
     max-width: calc(400px - 48px);
     min-width: 300px;
@@ -20,14 +20,14 @@ body{
 
 }
 
-#loginForm #logoLogin{
+#loginForm #logoLogin, #signupForm #logoLogin{
     display: block;
     width: 100%;
     background-image: linear-gradient(rgba(19, 49, 92, 0.25), #4EA8DE);
     border-radius: 50%;
 }
 
-#loginForm h1{
+#loginForm h1, #signupForm h1{
     font-family: 'Poppins', sans-serif;
     font-weight:700;
     font-size: 32px;
@@ -37,7 +37,7 @@ body{
     
 }
 
-#loginForm label{
+#loginForm label, #signupForm label{
     display: block;
     font-family: 'Poppins', sans-serif;
     font-weight:500;
@@ -45,7 +45,7 @@ body{
     color: #03045e;
 }
 
-#loginForm .textFields{
+#loginForm .textFields, #signupForm .textFields{
     padding: 8px 16px;
     display: block;
     margin: 0 auto 8px;
@@ -59,11 +59,11 @@ body{
     font-weight:500;
 }
 
-#loginForm .textFields:focus{
+#loginForm .textFields:focus, #signupForm .textFields:focus{
     border: 1px solid #03045e;
 }
 
-#loginForm #submit{
+#loginForm #submit, #signupForm #submit{
     display: block;
     margin: 16px auto;
     width: 100%;
@@ -77,7 +77,7 @@ body{
     color: #fff;
 }
 
-#loginForm #newUser{
+#loginForm a, #signupForm a{
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
     border: 0;
@@ -86,14 +86,16 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     text-decoration: underline;
+    color: #03045e;
+    font-size: 14px;
+    text-align: center;
 }
 
-#loginForm #newUser:hover, #loginForm #submit:hover {
+a:hover, #submit:hover, a:hover, #submit:hover {
     cursor: pointer;
 }
 
 
-
-#signupForm{
-    display:none;
+.hidden{
+    display: none;
 }

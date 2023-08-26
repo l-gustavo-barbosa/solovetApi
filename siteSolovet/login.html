@@ -10,21 +10,25 @@
 <body>
     <form id="loginForm">
         <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
-        <h1>SoloVet</h1>
+        <h1>SoloVet - Login</h1>
         <label for="login">Login</label>
         <input type="text" id="login" name="login" class="textFields">
         <label for="password">Senha</label>
         <input type="password" id="password" name="password" class="textFields">
         <input type="submit" id="submit" value="Entrar">
-        <button id="newUser">Ainda não tem conta? Crie aqui.</button>
+        <a href="cadastro.html">Ainda não tem conta? Crie aqui</a>
     </form>
-    <form id="signupForm">
+    <form id="signupForm" class="hidden">
+        <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
+        <h1>SoloVet - Registro</h1>
         <label for="login">Login</label>
-        <input type="text" id="newUserLogin" name="login" class="textFields">
+        <input type="text" id="login" name="login" class="textFields">
         <label for="password">Senha</label>
-        <input type="password" id="newUserPassword" name="password" class="textFields">
-        <input type="submit" id="submit" value="Entrar">
-        <button id="oldUser">Ainda não tem conta? Crie aqui.</button>
+        <input type="password" id="password" name="password" class="textFields">
+        <label for="password2">Digite sua senha novamente</label>
+        <input type="password" id="password2" name="password2" class="textFields">
+        <input type="submit" id="submit" value="Registrar">
+        <a href="cadastro.html">Já tem tem conta? Crie aqui.</a>
     </form>
 </body>
 </html>
