@@ -23,8 +23,9 @@ async function login(username, password){
             })
         });
         console.log(response)
+        console.log(response);
         if(response.ok){
-            const data = await responde.json();
+            const data = await response.json();
             console.log("Login bem sucedido: ", data);
         } else {
             console.error("Erro no login:", response.statusText)
