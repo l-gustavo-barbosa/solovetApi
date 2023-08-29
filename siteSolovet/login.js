@@ -27,7 +27,8 @@ async function login(username, password){
         if(response.ok){
             const data = await response.json();
             console.log("Login bem sucedido: ", data);
-            location.href = "dashboard.html"
+            localStorage.setItem("tokenJWT", response);
+            location.href = "dashboard.html";
         } else {
             console.error("Erro no login:", response.statusText)
         }
