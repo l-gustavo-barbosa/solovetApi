@@ -16,7 +16,7 @@ async function cadastro(nome, email, fone, crmv){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorizathion": localStorage.getItem("tokenJWT")
+                
             },
             body: JSON.stringify({
                 nome:nome,
