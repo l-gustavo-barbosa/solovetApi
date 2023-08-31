@@ -21,18 +21,16 @@ document.getElementById("btnCadastro").addEventListener("click", function(event)
 document.getElementById("signupForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evitar o comportamento padrão do formulário
 
-    const username = document.getElementById("login").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("loginCadastro").value;
+    const password = document.getElementById("passwordCadastro").value;
     const password2 = document.getElementById("password2").value;
     if(password == password2){
         login(username, password);
-    } else {window.alert("Suas senhas não coincidem.")
-    document.getElementById("signupForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Evitar o comportamento padrão do formulário
-    
-        const username = document.getElementById("login").value;
-        const password = document.getElementById("password").value;
-        const password2 = document.getElementById("password2").value;})};
+    } else {
+        window.alert("Suas senhas não coincidem.");
+        document.getElementById("passwordCadastro").value = "";
+        document.getElementById("password2").value = "";
+    }
     
 });
 
