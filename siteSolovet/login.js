@@ -25,7 +25,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     const password = document.getElementById("passwordCadastro").value;
     const password2 = document.getElementById("password2").value;
     if(password == password2){
-        login(username, password);
+        cadastro(username, password);
     } else {
         window.alert("Suas senhas não coincidem.");
         document.getElementById("passwordCadastro").value = "";
