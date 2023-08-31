@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form id="loginForm">
-        <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
-        <h1>SoloVet - Login</h1>
-        <label for="login">Login</label>
-        <input type="text" id="login" name="login" class="textFields">
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" class="textFields">
-        <input type="submit" id="submit" value="Entrar">
-        <a href="cadastro.html">Ainda não tem conta? Crie aqui</a>
-    </form>
-    <form id="signupForm" class="hidden">
-        <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
-        <h1>SoloVet - Registro</h1>
-        <label for="login">Login</label>
-        <input type="text" id="login" name="login" class="textFields">
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" class="textFields">
-        <label for="password2">Digite sua senha novamente</label>
-        <input type="password" id="password2" name="password2" class="textFields">
-        <input type="submit" id="submit" value="Registrar">
-        <a href="cadastro.html">Já tem tem conta? Crie aqui.</a>
-    </form>
+    <div id="containerLogin">
+        <form id="loginForm">
+            <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
+            <h1>SoloVet - Login</h1>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" class="textFields">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" class="textFields">
+            <input type="submit" id="submit" value="Entrar">
+        </form>
+        <button class="btnChange" id="btnLogin">Ainda não tem conta? Crie aqui</button>
+    </div>
+    <div id="containerCadastro" class="hidden">
+        <form id="signupForm">
+            <img src="./css/imagens/solovet.png" alt="logo solovet" id="logoLogin">
+            <h1>SoloVet - Registro</h1>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" class="textFields">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" class="textFields">
+            <label for="password2">Digite sua senha novamente</label>
+            <input type="password" id="password2" name="password2" class="textFields">
+            <input type="submit" id="submit" value="Registrar">
+        </form>
+        <button class="btnChange" id="btnCadastro">Já tem tem conta? Crie aqui.</button>
+    </div>
 </body>
 </html>

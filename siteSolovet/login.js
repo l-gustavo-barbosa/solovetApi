@@ -8,10 +8,30 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     login(username, password);
 });
 
+document.getElementById("btnLogin").addEventListener("click", function(event){
+    document.getElementById("containerCadastro").classList.remove("hidden");
+    document.getElementById("containerLogin").classList.add("hidden");
+})
+
+document.getElementById("btnCadastro").addEventListener("click", function(event){
+    document.getElementById("containerLogin").classList.remove("hidden");
+    document.getElementById("containerCadastro").classList.add("hidden");
+})
+
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evitar o comportamento padrão do formulário
+
+    const username = document.getElementById("login").value;
+    const password = document.getElementById("password").value;
+    const password2 = document.getElementById("password2").value;
+    if(password == password2){
+        login(username, password);
+    } else {window.alert("Suas senhas não coincidem.")}
+    
+});
+
 async function login(username, password){
-    console.log("teste");
     try{
-        console.log("teste");
         const response = await fetch("http://localhost:8080/usuarios/login", {
             
             method: "POST",
@@ -31,6 +51,33 @@ async function login(username, password){
             location.href = "dashboard.html";
         } else {
             console.error("Erro no login:", response.statusText)
+        }
+    } catch (error) {
+        console.error("Error:", error);
+      }
+}
+
+async function cadastro(username, password){
+    try{
+        const response = await fetch("http://localhost:8080/usuarios/cadastro", {
+            
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username:username,
+                password:password
+            })
+        });
+
+        if(response.ok){
+            const data = await response.json();
+            console.log("Cadastro bem sucedido: ", data);
+            login(username, password);
+            location.href = "dashboard.html";
+        } else {
+            console.error("Erro no cadastro:", response.statusText)
         }
     } catch (error) {
         console.error("Error:", error);
