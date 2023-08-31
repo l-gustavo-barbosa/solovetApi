@@ -26,7 +26,13 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     const password2 = document.getElementById("password2").value;
     if(password == password2){
         login(username, password);
-    } else {window.alert("Suas senhas não coincidem.")}
+    } else {window.alert("Suas senhas não coincidem.")
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar o comportamento padrão do formulário
+    
+        const username = document.getElementById("login").value;
+        const password = document.getElementById("password").value;
+        const password2 = document.getElementById("password2").value;})};
     
 });
 
