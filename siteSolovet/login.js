@@ -78,7 +78,6 @@ async function cadastro(username, password){
         if(response.ok){
             const data = await response.json();
             console.log("Cadastro bem sucedido: ", data);
-            login(username, password);
             
         } else {
             console.error("Erro no cadastro:", response.statusText)
