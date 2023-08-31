@@ -79,7 +79,7 @@ async function cadastro(username, password){
             const data = await response.json();
             console.log("Cadastro bem sucedido: ", data);
             login(username, password);
-            location.href = "dashboard.html";
+            
         } else {
             console.error("Erro no cadastro:", response.statusText)
         }
