@@ -2,9 +2,9 @@ console.log("teste");
 getNome();
 
 
- function getNome(){
+ async function getNome(){
     try{
-        const response = fetch("http://localhost:8080/veterinario/" + localStorage.getItem("email"), {
+        const response = await fetch("http://localhost:8080/veterinario/" + localStorage.getItem("email"), {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -13,7 +13,7 @@ getNome();
     });
 
     if(response.ok){
-        const data = response.json();
+        const data = await response.json();
         document.getElementById("nomeVeterinario").value = response;
     } else {
         console.error("Erro ao carregar as informações do usuário.", response.statusText)
