@@ -1,3 +1,4 @@
+console.log(localStorage.getItem("email"));
 getNome();
 
 
