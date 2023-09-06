@@ -78,8 +78,6 @@ async function cadastro(username, password){
         });
 
         if(response.ok){
-            console.log = response;
-            const data = await response.json();
             location.href = "veterinarioForm.html";
             
         } else {

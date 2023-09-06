@@ -35,12 +35,13 @@ public class UsuarioController {
 
     @Transactional
     @PostMapping("/cadastro")
-    public void cadastro(@RequestBody @Valid DadosCadastro dados){
+    public ResponseEntity cadastro(@RequestBody @Valid DadosCadastro dados){
         var usuario = new Usuario(dados);
         System.out.println(usuario.getPassword());
         usuario.setPassword(passwordEncoder.encode(dados.password()));
         System.out.println(usuario.getPassword());
         repository.save(usuario);
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/login")
