@@ -79,7 +79,6 @@ async function cadastro(username, password){
 
         if(response.ok){
             const data = await response.json();
-            console.log("Cadastro bem sucedido: ", data);
             location.href = "veterinarioForm.html";
             
         } else {
