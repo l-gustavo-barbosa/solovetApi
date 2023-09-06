@@ -52,7 +52,9 @@ async function login(username, password){
             const data = await response.json();
             console.log("Login bem sucedido: ", data);
             localStorage.setItem("tokenJWT", response);
-            location.href = "dashboard.html";
+            localStorage.setItem("email", username);
+            location.href = "dashboard.html"
+            
         } else {
             console.error("Erro no login:", response.statusText)
         }
@@ -78,6 +80,7 @@ async function cadastro(username, password){
         if(response.ok){
             const data = await response.json();
             console.log("Cadastro bem sucedido: ", data);
+            location.href = "veterinarioForm.html";
             
         } else {
             console.error("Erro no cadastro:", response.statusText)

@@ -5,6 +5,7 @@ import com.br.solovet.Solovet.Model.Veterinario.Veterinario;
 import com.br.solovet.Solovet.Model.Veterinario.VeterinarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,11 @@ public class VeterinarioController {
         repository.save(veterinario);
     }
 
-
+    @GetMapping("/{emailVeterinario}")
+    public ResponseEntity nomeVeterinario(@PathVariable String emailVeterinario){
+        var veterinario = repository.findByEmail(emailVeterinario);
+        return ResponseEntity.ok(veterinario);
+    }
 
 
 }

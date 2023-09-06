@@ -21,7 +21,6 @@ public class TokenService {
     public String gerarToken(Usuario usuario) {
         try {
             var algoritmo = Algorithm.HMAC256(secret);
-            System.out.println(algoritmo);
             return JWT.create().withIssuer("API SoloVet").withSubject(usuario.getUsername())
                     .withExpiresAt(dataExpiracao()).sign(algoritmo);
 
