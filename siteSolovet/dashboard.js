@@ -13,7 +13,7 @@ getNome();
 
     if(response.ok){
         const data = response.json();
-        document,getElementById("nomeVeterinario").value = response;
+        document.getElementById("nomeVeterinario").value = response;
     } else {
         console.error("Erro ao carregar as informações do usuário.", response.statusText)
     }
