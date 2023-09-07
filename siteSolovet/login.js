@@ -51,8 +51,7 @@ async function login(username, password){
         if(response.ok){
             const data = await response.json();
             console.log("Login bem sucedido: ", JSON.stringify(data.token));
-            console.log("Login bem sucedido1: ", JSON.stringify(Object.token));
-            localStorage.setItem("tokenJWT", data);
+            localStorage.setItem("tokenJWT", JSON.stringify(data.token));
             localStorage.setItem("email", username);
             location.href = "dashboard.html"
             
@@ -89,8 +88,8 @@ async function cadastro(username, password){
                     password:password
                 })
             })
-            console.log(token.stringify());
-            localStorage.setItem("tokenJWT", token.JSON());
+            const tokenJWT = await response.json();
+            localStorage.setItem("tokenJWT", JSON.stringify(tokenJWT.token));
             location.href = "veterinarioForm.html";
             
         } else {
