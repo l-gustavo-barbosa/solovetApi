@@ -7,7 +7,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     login(username, password);
 });
-console.log("hello");
+
 document.getElementById("btnLogin").addEventListener("click", function(event){
     document.getElementById("containerCadastro").classList.remove("hidden");
     document.getElementById("containerLogin").classList.add("hidden");
