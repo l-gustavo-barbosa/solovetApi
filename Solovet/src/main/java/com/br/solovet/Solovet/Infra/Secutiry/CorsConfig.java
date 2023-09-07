@@ -8,7 +8,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Mapeia todos os endpoints da API
-                .allowedOrigins("*") // Domínio permitido (troque pelo domínio correto)
+                .allowedOrigins("*") // Domínio permitido
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Métodos HTTP permitidos
                 .allowedHeaders("*"); // Headers permitidos
     }

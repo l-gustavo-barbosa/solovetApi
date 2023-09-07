@@ -78,6 +78,17 @@ async function cadastro(username, password){
         });
 
         if(response.ok){
+            const token = await fetch("http://localhost:8080/usuarios/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username:username,
+                    password:password
+                })
+            })
+            localStorage.setItem("tokenJWT", token);
             location.href = "veterinarioForm.html";
             
         } else {
