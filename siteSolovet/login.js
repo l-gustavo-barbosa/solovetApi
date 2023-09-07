@@ -88,7 +88,7 @@ async function cadastro(username, password){
                     password:password
                 })
             });
-            const dataCadastro = await response.json();
+            const dataCadastro = await token.json();
             localStorage.setItem("tokenJWT", JSON.stringify(dataCadastro.token));
             location.href = "veterinarioForm.html";
             
