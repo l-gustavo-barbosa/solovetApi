@@ -9,7 +9,7 @@ document.getElementById("cadastroVet").addEventListener("submit", function(event
 });
 
 const token = "Bearer: " + localStorage.getItem("tokenJWT").replace('"', ' ');
-token.replace('"', '');
+token.substring(token.length-1);
 
 async function cadastro(nome, email, fone, crmv){
     try{
