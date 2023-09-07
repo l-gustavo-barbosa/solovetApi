@@ -49,7 +49,7 @@ async function login(username, password){
         });
 
         if(response.ok){
-            const data = await response.stringify();
+            const data = await response.JSON;
             console.log("Login bem sucedido: ", data);
             localStorage.setItem("tokenJWT", data);
             localStorage.setItem("email", username);
