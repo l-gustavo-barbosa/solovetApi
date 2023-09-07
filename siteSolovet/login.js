@@ -88,6 +88,7 @@ async function cadastro(username, password){
                     password:password
                 })
             })
+            console.log(token);
             localStorage.setItem("tokenJWT", token);
             location.href = "veterinarioForm.html";
             

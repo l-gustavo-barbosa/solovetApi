@@ -1,4 +1,3 @@
-
 document.getElementById("cadastroVet").addEventListener("submit", function(event) {
     event.preventDefault(); // Evitar o comportamento padrão do formulário
 
