@@ -9,7 +9,7 @@ document.getElementById("cadastroVet").addEventListener("submit", function(event
 });
 
 const token = localStorage.getItem("tokenJWT").slice(1,-1);
-
+const bearerToken = "Bearer " + token;
 
 async function cadastro(nome, email, fone, crmv){
     try{
@@ -18,7 +18,7 @@ async function cadastro(nome, email, fone, crmv){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer " + token
+                "Authorization": "Bearer " + bearerToken
             },
             body: JSON.stringify({
                 nome:nome,
