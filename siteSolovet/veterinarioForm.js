@@ -18,7 +18,7 @@ async function cadastro(nome, email, fone, crmv){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer " + bearerToken
+                "Authorization": bearerToken
             },
             body: JSON.stringify({
                 nome:nome,
