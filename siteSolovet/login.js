@@ -50,7 +50,8 @@ async function login(username, password){
 
         if(response.ok){
             const data = await response.json();
-            console.log("Login bem sucedido: ", data);
+            console.log("Login bem sucedido: ", JSON.stringify(data.token));
+            console.log("Login bem sucedido1: ", JSON.stringify(Object.token));
             localStorage.setItem("tokenJWT", data);
             localStorage.setItem("email", username);
             location.href = "dashboard.html"
