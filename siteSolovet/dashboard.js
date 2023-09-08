@@ -8,7 +8,8 @@ getNome();
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer: " + localStorage.getItem("tokenJWT")
+                "Authorization": "Bearer: " + localStorage.getItem("tokenJWT"),
+                "Acess-Control-Allow-Origin": "*"
             }
     });
 

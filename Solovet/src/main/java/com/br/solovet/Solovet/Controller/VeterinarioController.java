@@ -17,9 +17,10 @@ public class VeterinarioController {
 
     @Transactional
     @PostMapping("/cadastrar")
-    public void cadastrar(@RequestBody @Valid DadosCadastro dadosCadastro){
+    public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastro dadosCadastro){
         var veterinario = new Veterinario(dadosCadastro);
         repository.save(veterinario);
+        return ResponseEntity.ok(dadosCadastro);
     }
 
     @GetMapping("/{emailVeterinario}")
