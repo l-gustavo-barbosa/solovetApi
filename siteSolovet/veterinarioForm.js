@@ -12,7 +12,7 @@ const token = localStorage.getItem("tokenJWT");
 
 async function cadastro(nome, email, fone, crmv){
     try{
-        const response = await fetch("http://localhost:8080/veterinario/cadastrar", {
+        const response = await fetch("ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/veterinario/cadastrar", {
             
             method: "POST",
             headers: {
