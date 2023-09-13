@@ -65,7 +65,7 @@ async function login(username, password){
 
 async function cadastro(username, password){
     try{
-        const response = await fetch("http://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/usuarios/cadastro", {
+        const response = await fetch("https://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/usuarios/cadastro", {
             
             method: "POST",
             headers: {
