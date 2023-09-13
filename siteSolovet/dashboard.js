@@ -4,7 +4,7 @@ getNome();
 
  async function getNome(){
     try{
-        const response = await fetch("ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/veterinario/gabrieladamasio@solovet.com", {
+        const response = await fetch("http://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/veterinario/gabrieladamasio@solovet.com", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
