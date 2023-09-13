@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/veterinario")
+@CrossOrigin("*")
 public class VeterinarioController {
     @Autowired
     VeterinarioRepository repository;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @Transactional
     @PostMapping("/cadastrar")
     public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastro dadosCadastro){

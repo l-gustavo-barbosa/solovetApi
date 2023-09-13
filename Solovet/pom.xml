@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.br.solovet</groupId>
 	<artifactId>Solovet</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>Solovet</name>
 	<description>Demo api for Solovet</description>
 	<properties>

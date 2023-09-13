@@ -51,7 +51,7 @@ async function login(username, password){
         if(response.ok){
             const data = await response.json();
             console.log("Login bem sucedido: ", JSON.stringify(data.token));
-            localStorage.setItem("tokenJWT", JSON.stringify(data.token));
+            localStorage.setItem('token', "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnYWJyaWVsYWRhbWFzaW9Ac29sb3ZldC5jb20iLCJpc3MiOiJBUEkgU29sb1ZldCIsImV4cCI6MTY5NDYzMDExN30.XFfhX_nJ1pDl3kkjDO41LFdRZommxcBVGLRZGsow4FI");
             localStorage.setItem("email", username);
             location.href = "dashboard.html"
             

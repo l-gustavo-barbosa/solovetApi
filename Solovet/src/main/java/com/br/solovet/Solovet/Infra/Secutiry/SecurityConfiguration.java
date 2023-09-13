@@ -17,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static org.springframework.http.HttpMethod.OPTIONS;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @EnableWebSecurity
@@ -28,8 +29,14 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) ->
-                        authorizeHttpRequests
-                                .requestMatchers("/usuarios/**").permitAll().anyRequest().authenticated().and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                        {
+                            try {
+                                authorizeHttpRequests
+                                        .requestMatchers("/usuarios/**").permitAll().anyRequest().authenticated().and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class).cors(withDefaults());
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
                 );
 
         return http.csrf(csrf -> csrf.disable())
@@ -37,7 +44,7 @@ public class SecurityConfiguration {
                 .build();
 
 
-    }
+    };
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
