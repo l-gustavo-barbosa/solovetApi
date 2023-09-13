@@ -1,4 +1,4 @@
-console.log(sessionStorage.getItem("token"))
+
 getNome();
 
 
@@ -8,7 +8,7 @@ getNome();
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": sessionStorage.getItem("token")
+                "Authorization": sessionStorage.getItem("token").replaceAll('"','')
                 
             }
     });
