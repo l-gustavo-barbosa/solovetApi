@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.br.solovet.Solovet.SolovetApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.267 s - in com.br.solovet.Solovet.SolovetApplicationTests

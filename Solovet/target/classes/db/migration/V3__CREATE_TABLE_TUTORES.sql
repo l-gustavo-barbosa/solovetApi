@@ -1,0 +1,21 @@
+CREATE TABLE tutores (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    telefone VARCHAR(11) UNIQUE NOT NULL,
+    logradouro varchar(100) not null,
+    bairro varchar(100) not null,
+    cep varchar(9) not null,
+    complemento varchar(100),
+    numero varchar(20),
+    uf char(2) not null,
+    cidade varchar(100) not null,
+    sexo VARCHAR(1) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    rg VARCHAR(10) NOT NULL,
+    aniversario DATE NOT NULL,
+    status SMALLINT,
+    veterinario_id BIGINT,
+    FOREIGN KEY(veterinario_id) REFERENCES veterinarios(id),
+    PRIMARY KEY(id)
+) ENGINE=InnoDB;
