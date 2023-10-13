@@ -36,7 +36,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
 
 async function login(username, password){
     try{
-        const response = await fetch("https://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/usuarios/login", {
+        const response = await fetch("http://localhost:8080/usuarios/login", {
             
             method: "POST",
             headers: {
@@ -65,7 +65,7 @@ async function login(username, password){
 
 async function cadastro(username, password){
     try{
-        const response = await fetch("https://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/usuarios/cadastro", {
+        const response = await fetch("http://localhost:8080/usuarios/cadastro", {
             
             method: "POST",
             headers: {
@@ -78,7 +78,7 @@ async function cadastro(username, password){
         });
 
         if(response.ok){
-            const token = await fetch("http://ec2-3-131-137-213.us-east-2.compute.amazonaws.com:8080/usuarios/login", {
+            const token = await fetch("http://localhost:8080/usuarios/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
