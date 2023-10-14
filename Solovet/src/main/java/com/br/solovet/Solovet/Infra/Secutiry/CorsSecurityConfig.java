@@ -15,7 +15,7 @@ public class CorsSecurityConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**").
-                allowedOrigins("https://l-gustavo-barbosa.github.io").
+                allowedOrigins("https://artotis.com.br").
                 allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
     }
 

@@ -39,6 +39,7 @@ public class SecurityConfiguration {
                         }
                 );
 
+
         return http.csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
@@ -50,6 +51,7 @@ public class SecurityConfiguration {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder(){
